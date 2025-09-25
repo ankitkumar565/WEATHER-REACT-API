@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Testing Weather API</h1>
+    <button onclick="testAPI()">Test API Key</button>
+    <div id="result"></div>
+
+    <script>
+        function testAPI() {
+            fetch('https://api.weatherapi.com/v1/current.json?key=b5d42bedc4674ca195a170923252509&q=London')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                })
+                .catch(err => {
+                    document.getElementById('result').innerHTML = 'Error: ' + err.message;
+                });
+        }
+    </script>
+</body>
+</html>
