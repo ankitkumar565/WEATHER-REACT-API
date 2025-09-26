@@ -10,8 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(0deg, #16469e, #1f4ea3 80%) no-repeat;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .bubble {
@@ -50,14 +50,24 @@ body {
 }
 
 .weather-temperatures {
-  width: 400px;
-  min-width: 400px;
+  width: 280px;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .weather-temperatures {
+    width: 250px;
+    min-width: 250px;
+  }
 }
 
 .weather-status {
-  width: 1250px;
+  max-width: 1250px;
+  width: 100%;
   margin: auto;
   margin-top: 30px;
+  padding: 0 10px;
 }
 
 .weather-temp p {

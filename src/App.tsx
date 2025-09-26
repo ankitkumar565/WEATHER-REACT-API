@@ -137,14 +137,14 @@ function App() {
   return (
     <div className="App">
         <section className="weather py-8">
-          <div className="sm:container sm:mx-auto px-10">
-            <div className="px-20">
-              <div className="header px-5">
-                <div className="flex justify-between align-baseline">
-                  <div className="app-logo align-baseline text-white my-auto">
-                    <b className="align-baseline my-auto text-xl">Weather App</b>
+          <div className="container mx-auto px-4 md:px-10">
+            <div className="md:px-20">
+              <div className="header px-2 md:px-5">
+                <div className="flex flex-col md:flex-row md:justify-between md:align-baseline gap-4">
+                  <div className="app-logo text-white text-center md:text-left">
+                    <b className="text-xl">Weather App</b>
                   </div>
-                  <div className="app-search w-1/3">
+                  <div className="app-search w-full md:w-1/3">
                     <form className="flex items-center" onSubmit={(e) => {e.preventDefault(); if(search_query) search(search_query);}}>   
                         <label htmlFor="voice-search" className="sr-only">Search</label>
                         <div className="relative w-full">
