@@ -77,7 +77,7 @@ function App() {
 
     const search = (query: string) => {
       console.log('Searching for:', query);
-      const url = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${encodeURIComponent(query)}&days=7&aqi=no&alerts=no`;
+      const url = `https://api.weatherapi.com/v1/forecast.json?key=b5d42bedc4674ca195a170923252509&q=${encodeURIComponent(query)}&days=7&aqi=no&alerts=no`;
       console.log('API URL:', url);
       
       fetch(url)
