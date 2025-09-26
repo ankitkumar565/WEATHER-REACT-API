@@ -21,16 +21,25 @@ body {
 }
 
 .creditionals {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  width: -webkit-fill-available;
+  width: 100%;
   padding: 1.25rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 10;
 }
 
 .creditionals a {
   font-weight: bold;
-  color: #1f4ea3;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.creditionals a:hover {
+  color: #fbbf24;
 }
 
 .weather-temp {
