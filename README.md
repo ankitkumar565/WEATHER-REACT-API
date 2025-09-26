@@ -10,16 +10,16 @@
 ## Installation
 You must install all dependencies
 
-```zsh
-yarn install
+```bash
+npm install
 ```
 
 
 ## Start application
 > Make sure you in root/app folder and then run:
 
-```zsh 
-yarn start 
+```bash 
+npm start 
 ```
 
 > open browser by default: localhost:3000

@@ -166,12 +166,12 @@ function Weather(props: any) {
                     </div>
                 </div>
             </div>
-            <div className="weather-status mt-10 overflow-x-scroll rounded-2xl">
-                <div className="flex justify-between">
+            <div className="weather-status mt-10 overflow-x-auto rounded-2xl" id="forecast-container" style={{scrollBehavior: 'smooth'}} onWheel={(e) => {e.preventDefault(); e.currentTarget.scrollLeft += e.deltaY;}}>
+                <div className="flex gap-4 pb-4" style={{minWidth: 'max-content'}}>
                     {   
                         forecast.map((witem: any) => {
                             return (
-                                <div className="weather-temperatures mt-0 bg-white p-10 rounded-2xl z-10 mx-2" key={witem.date}>
+                                <div className="weather-temperatures mt-0 bg-white p-6 rounded-2xl z-10 flex-shrink-0" style={{minWidth: '280px'}} key={witem.date}>
                                     <p className="text-xl mt-0 text-gray-600">
                                         {
                                             isToday(witem.date) ? "Today" : parseDate(witem.date)
