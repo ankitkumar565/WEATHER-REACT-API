@@ -122,7 +122,7 @@ function App() {
       if(navigator.geolocation && !active) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
       }
-    }, []);
+    }, [active]);
 
   return (
     <div className="App">
